@@ -1,6 +1,6 @@
-# BubbleBot
+# BobaBot
 
-BubbleBot is an autonomous bubble tea preparation robot built on ROS 2.
+BobaBot is an autonomous bubble tea preparation robot built on ROS 2.
 It combines navigation, manipulator control, a recipe database, and visual workflow planning into a single integrated system.
 
 ## Features
@@ -15,7 +15,7 @@ It combines navigation, manipulator control, a recipe database, and visual workf
 ## Project Structure
 
 ```
-BubbleBot/
+BobaBot/
 ├── src/
 │   ├── server_interface/         # ROS2 node for DB and workflow logic
 │   ├── my_apriltag_pnp/          # AprilTag-based pose estimation
