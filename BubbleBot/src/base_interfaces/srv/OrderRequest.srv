@@ -1,0 +1,7 @@
+string recipe_name
+string sugar_level
+string ice_level
+string toppings
+---
+bool success
+string message

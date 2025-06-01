@@ -1,0 +1,36 @@
+# Request
+string command
+string name
+string description
+string liquid_ingredients
+string default_toppings
+int32 type
+int32 station_id
+int32 is_liquid
+int32 is_topping
+string topping_position
+string branch_name
+
+
+string station_type
+---
+
+float64 loc_x
+float64 loc_y
+float64 loc_z
+float64 loc_ox
+float64 loc_oy
+float64 loc_oz
+float64 loc_ow
+
+
+# Response
+bool success
+string message
+string[] material_names
+string[] types
+string[] positions
+string[] recipe_names
+string[] descriptions
+string[] liquids
+string[] toppings

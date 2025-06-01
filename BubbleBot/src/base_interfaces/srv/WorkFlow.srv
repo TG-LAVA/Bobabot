@@ -1,0 +1,6 @@
+# WorkFlow.srv
+int32[] grabberstatus
+geometry_msgs/PoseStamped[] turtlebotgoal
+geometry_msgs/PointStamped[] armgoal
+---
+bool success

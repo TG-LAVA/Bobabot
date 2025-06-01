@@ -1,0 +1,1 @@
+string[] status_bits
