@@ -1,0 +1,14 @@
+# dataset.yaml
+
+# Paths to your dataset
+path: ../datasets/custom  # dataset root directory
+train: images/train
+val: images/val
+test: images/test
+
+# Number of classes
+nc: 1
+
+# Class names (order matters!)
+names:
+  0: red_cup
