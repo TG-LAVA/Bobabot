@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<robot name="dh_manipulator">
+
+  <link name="base">
+    <visual>
+      <geometry><cylinder radius="0.04" length="0.093"/></geometry>
+      <origin xyz="0 0 0.0465"/>
+      <material name="gray"><color rgba="0.5 0.5 0.5 1"/></material>
+    </visual>
+  </link>
+
+  <joint name="base_joint" type="revolute">
+    <parent link="base"/>
+    <child link="shoulder"/>
+    <origin xyz="0 0 0.093" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-2.094" upper="2.094" velocity="1.0" effort="10"/>
+  </joint>
+
+  <link name="shoulder">
+    <visual>
+      <geometry><cylinder radius="0.03" length="0.126"/></geometry>
+      <origin xyz="0.063 0 0" rpy="0 1.5708 0"/>
+      <material name="blue"><color rgba="0 0 1 1"/></material>
+    </visual>
+  </link>
+
+  <joint name="shoulder_joint" type="revolute">
+    <parent link="shoulder"/>
+    <child link="elbow"/>
+    <origin xyz="0.126 0 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-2.094" upper="2.094" velocity="1.0" effort="10"/>
+  </joint>
+
+  <link name="elbow">
+    <visual>
+      <geometry><cylinder radius="0.025" length="0.13"/></geometry>
+      <origin xyz="0.065 0 0" rpy="0 1.5708 0"/>
+      <material name="green"><color rgba="0 1 0 1"/></material>
+    </visual>
+  </link>
+
+  <joint name="elbow_joint" type="revolute">
+    <parent link="elbow"/>
+    <child link="wrist"/>
+    <origin xyz="0.13 0 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-2.094" upper="2.094" velocity="1.0" effort="10"/>
+  </joint>
+
+  <link name="wrist">
+    <visual>
+      <geometry><cylinder radius="0.02" length="0.147"/></geometry>
+      <origin xyz="0.0735 0 0" rpy="0 1.5708 0"/>
+      <material name="red"><color rgba="1 0 0 1"/></material>
+    </visual>
+  </link>
+
+  <joint name="wrist_joint" type="revolute">
+    <parent link="wrist"/>
+    <child link="end_effector"/>
+    <origin xyz="0.147 0 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-2.094" upper="2.094" velocity="1.0" effort="10"/>
+  </joint>
+
+  <link name="end_effector">
+    <visual>
+      <geometry><sphere radius="0.02"/></geometry>
+      <origin xyz="0 0 0"/>
+      <material name="yellow"><color rgba="1 1 0 1"/></material>
+    </visual>
+  </link>
+
+</robot>
